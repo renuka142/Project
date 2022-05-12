@@ -53,21 +53,21 @@ def data_prep():
 									data_format=None, validation_split=0.0, dtype=None)
 	
 	
-	train_data = train_gen.flow_from_directory("/home/saireddy/Desktop/capstone/fer2013/images/Training/",
+	train_data = train_gen.flow_from_directory("/home/user/Desktop/capstone/fer2013/images/Training/",
                                            target_size = (48, 48),
                                            classes = ['Angry', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprise', 'Neutral'],
                                            class_mode = 'categorical',
                                            batch_size = 32,seed = 1,
 										   color_mode = "grayscale")
 	
-	test_data = test_gen.flow_from_directory("/home/saireddy/Desktop/capstone/fer2013/images/PublicTest/",
+	test_data = test_gen.flow_from_directory("/home/user/Desktop/capstone/fer2013/images/PublicTest/",
                                            target_size = (48, 48),
                                            classes = ['Angry', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprise', 'Neutral'],
                                            class_mode = 'categorical',
                                            batch_size = 32,seed = 1,
 										   color_mode = "grayscale")
 	
-	val_data = val_gen.flow_from_directory("/home/saireddy/Desktop/capstone/fer2013/images/PrivateTest/",
+	val_data = val_gen.flow_from_directory("/home/user/Desktop/capstone/fer2013/images/PrivateTest/",
                                            target_size = (48, 48),
                                            classes = ['Angry', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprise', 'Neutral'],
                                            class_mode = 'categorical',
@@ -188,7 +188,7 @@ def test_model(model, test_data):
 	print("Accuracyloss:-", score[0])
 	print("AccuracyScore",score[1] )
 	
-	model.save("/home/saireddy/Desktop/capstone/finalweights.h5")
+	model.save("/home/user/Desktop/capstone/finalweights.h5")
 	return score[0], score[1]
 
 def plotting(history):

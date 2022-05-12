@@ -1,7 +1,7 @@
 import cv2
 import os
 
-path = os.path.abspath(r"D:\capstone  data\Resized\Ranveer Singh\\") ###OLD FOLDER PATH
+path = os.path.abspath(r"D:\capstone  data\Resized\User\\") ###OLD FOLDER PATH
 def get_imlist(path):
   lis = [os.path.join(path,f) for f in os.listdir(path) if f.endswith('.jpeg') or f.endswith('.jpg') or f.endswith('.png')]
   return lis
@@ -31,7 +31,7 @@ def facecrop(c):
             sub_face = img[y:y+h, x:x+w]
             fname, ext = os.path.splitext(image)
             print(fname, ext)
-            cv2.imwrite(r"D:\capstone  data\cropped\Ranveer Singh\/"+str(i)+"_cropped_"+ext, sub_face)
+            cv2.imwrite(r"D:\capstone  data\cropped\User\/"+str(i)+"_cropped_"+ext, sub_face)
             
         i =i+1
 

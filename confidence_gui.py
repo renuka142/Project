@@ -8,7 +8,7 @@ def GUI_Confidence(result):
     window.title("Confidence_checker")
     def exited():
         
-        messagebox.showinfo("EXIT", "Thanks Sir, Have a Great Day")
+        messagebox.showinfo("EXIT")
         exit()
 
     label = Label(window, text = result, bg="white", relief = 'solid',
